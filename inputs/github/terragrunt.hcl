@@ -1,5 +1,5 @@
 terraform {
-  source = "git@github.com:msanavia/iac.git/modules//github"
+  source = "git@github.com:msanavia/iac.git//modules/github"
 }
 
 include "root" {
