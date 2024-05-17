@@ -1,5 +1,5 @@
 terraform {
-  source = "${path_relative_from_include()}/../modules//github"
+  source = "git@github.com:msanavia/iac.git/modules//github"
 }
 
 include "root" {
