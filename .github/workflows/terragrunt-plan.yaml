@@ -18,11 +18,6 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@v2
 
-      - name: 'Git Credentials'
-        uses: de-vri-es/setup-git-credentials@v2
-        with:
-          credentials: ${{secrets.GIT_CREDENTIALS}}
-
       - name: Check terragrunt HCL
         uses: gruntwork-io/terragrunt-action@v2
         with:
@@ -38,6 +33,11 @@ jobs:
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v2
+
+      - name: 'Git Credentials'
+        uses: de-vri-es/setup-git-credentials@v2
+        with:
+          credentials: ${{secrets.GIT_CREDENTIALS}}
 
       - name: Plan
         uses: gruntwork-io/terragrunt-action@v2
